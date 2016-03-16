@@ -6,7 +6,6 @@ scalaVersion  := "2.11.7"
 
 scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8")
 
-author := "Yeshwanth Kumar"
 
 
 resolvers ++= Seq(
@@ -21,8 +20,8 @@ libraryDependencies ++= {
 
   Seq(
     "org.apache.spark" %% "spark-core" % sparkVersion,
-  "org.apache.spark" %% "spark-streaming" % sparkVersion,
-
+  "org.apache.spark" %% "spark-streaming" % sparkVersion
+)
 }
 
 resolvers += "typesafe repo" at " http://repo.typesafe.com/typesafe/releases/"

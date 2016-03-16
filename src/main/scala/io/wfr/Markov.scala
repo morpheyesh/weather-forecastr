@@ -1,9 +1,9 @@
 package io.wft
 
 
-object MarkovPP() {}
+//object MarkovPP() {}
 
-
+/*
 def main(args: Array[String]): Unit = {
 
 //spark configurations
@@ -14,5 +14,5 @@ def main(args: Array[String]): Unit = {
   .set("spark.executor.memory", "1g")
   .set("spark.eventLog.enabled", "true")
 
-val sparkContext = new SparkContext(sparkConf)
-}
+  val sparkContext = new SparkContext(sparkConf)
+}*/

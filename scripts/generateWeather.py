@@ -24,12 +24,6 @@ oTMax = [[0.4, 0.5, 0.1],
         [0.5, 0.2, 0.3],
         [0.7, 0.1, 0.2]]
 
-
-#probabilistic rel for pressure
-oPMax = [[0.3, 0.6, 0.1],
-        [0.2, 0.5, 0.3],
-        [0.0, 0.6, 0.4]]
-
 i = 0
 
 #Need a initial state vector to do calculcations with tMax
@@ -38,7 +32,6 @@ stateVectors = {'Sunny': [0.55, 0.34, 0.11], 'Rain': [0.32, 0.49, 0.19], 'Snow':
 
 LatlongMap = {'SYD': '-33.86,151.21', 'MAA':'13.08,80.27', 'ADL': '-34.92,138.62', 'MEL': '-37.83,144.98', 'SFO': '37.77,-122.41', 'NYC' : '40.71,-74.00',
               'PER':'-9.18,-75.01', 'TOR': '43.65,-79.38', 'BOM' : '19.07,72.87' , 'DEL' : '28.61,77.20' }
-TempMap = {'SYD': '+12.5', 'MAA':'+42.5', 'ADL': '+39.5'}
 ## With TPM and OB -> use single vector state -> use markov chain to get data.
 
 '''
