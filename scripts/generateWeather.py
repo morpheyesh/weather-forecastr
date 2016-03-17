@@ -72,7 +72,7 @@ This is the main function which generates the weather data
 
 def markovChain(stateVectors, tMax):
  init = primeInitData()
- target = open("weatherdate.txt", "w")
+ target = open("weatherdata.txt", "w")
 
  for i in init:
   mx = np.matrix(stateVectors[i['state']]) #day0
@@ -95,3 +95,24 @@ def markovChain(stateVectors, tMax):
  target.close()
 
 markovChain(stateVectors, tMax)
+
+
+###Design approach: (Note: update after deadline of 6 hours - two evenings)####
+#
+#  Essentially we need to build a system that generates valid data. Valid data can be generated with satellite image
+# to get the initial readings and using markov, we can get a chain of next state(s).
+##
+# 1. Get the satellite image of the earth
+# 2. Split it into multiple grids each having one weather station(to keep things simple for now)
+# 3. When new coordinates are given, it is converted into pixel and line with that determine the grid number and hence
+# the weather station too.
+# 4. With the pixel, line data, the elevation can be calculated from the image.
+# 5. Using the satellite image reading of the temperature and relative humidity, pressure can be found(Fourier transformation? Need to figure how its done)
+# 6. Now, with a given coords, the weather station that reads the data can be found, along with elevation and approx. t, h and p values
+#   with a random state(depending on the temperature - it can't be sunny in antartica with 35C.(http://geog.uoregon.edu/envchange/clim_animations/flash/tmp2m.html) )
+#
+#
+# Problem:  After n iterations, the state vector repeats. Use inhomogeneous markov chain, transition matrix varies?
+# (http://mathoverflow.net/questions/168398/time-inhomogeneous-markov-chains)
+#
+#
