@@ -91,7 +91,6 @@ def markovChain(stateVectors, tMax):
     pressure = md.getPressure(day1)
 
     writeToFile(i['station'], i['coordinates'], date, day1, temp, pressure, humidity, target )
-    j += j + 1
  target.close()
 
 markovChain(stateVectors, tMax)
